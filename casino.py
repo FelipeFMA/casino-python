@@ -25,10 +25,9 @@ if y == 3:
 if z == 3:
     z = "🍌"
 
-
 print("\n", x, y, z, "\n")
 
 if x == y == z:
-    print("Você Ganhou!\n")
+    print("You Won!\n")
 else:
-    print("Não foi dessa vez\n")
+    print("Better luck next time\n")
