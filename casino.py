@@ -1,5 +1,8 @@
 import random
 
+money = float(input("Enter your deposit money :"))
+bet = float(input("How much you bet to double it: "))
+
 x = random.randint(1, 3)
 y = random.randint(1, 3)
 z = random.randint(1, 3)
@@ -28,6 +31,10 @@ if z == 3:
 print("\n", x, y, z, "\n")
 
 if x == y == z:
-    print("You Won!\n")
+    bet *= 2
+    money += bet
+    print("You Won! you have ", money, "You earned ", bet)
 else:
-    print("Better luck next time\n")
+    money -= bet
+    print("Better luck next time, you loss ", bet ," Do you have ", money)
+    play= input(" play again? (y/n)")
