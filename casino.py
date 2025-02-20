@@ -1,7 +1,13 @@
 import random
 
-play = 'y'
-money = float(input("Enter your deposit money: "))
+play = "y"
+bet = 0
+money = input("Enter your deposit money: ").strip()
+
+while not money.isdigit() or float(money) <= 100:
+    money = input("Enter your deposit money: ")
+    
+money = float(money) 
     
 while play == "y":
     bet = float(input(f"\nHow much you bet to double (${money:.2f}): "))
@@ -9,7 +15,7 @@ while play == "y":
     x = random.randint(1, 3)
     y = random.randint(1, 3)
     z = random.randint(1, 3)
-    
+            
     if x == 1:
         x = "🍒"
     if y == 1:
