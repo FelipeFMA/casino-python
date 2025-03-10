@@ -51,4 +51,5 @@ while play.lower() == "y":
         print("💸 You're out of money! Game over.")
         break
 
-    play = input("Do you want to play again? (y/n): ").strip().lower()
+    play = input("Do you want to play again? (Y/n): ").strip().lower()
+    play = "y" if play in ["y", "yes"] else "n" if play in ["n", "no"] else "y"
